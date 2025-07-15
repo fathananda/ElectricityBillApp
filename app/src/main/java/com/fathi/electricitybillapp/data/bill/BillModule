@@ -1,0 +1,18 @@
+/**
+ * Modul pengelolaan tagihan listrik
+ *
+ * Komponen:
+ * - Bill.kt: Data class tagihan
+ * - BillEntity.kt: Entitas database tagihan
+ * - BillDao.kt: Interface akses data tagihan
+ * - BillRepository.kt: Repository pattern tagihan
+ *
+ * Kegunaan:
+ * - Mengelola tagihan listrik pelanggan
+ * - Memproses pembayaran tagihan
+ * - Menghitung total tagihan dengan biaya admin
+ * - Tracking status pembayaran
+ *
+ * @author Fathi
+ * @since 2025
+ */

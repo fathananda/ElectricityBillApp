@@ -20,6 +20,18 @@ class ElectricUsageRepository @Inject constructor(
         return electricUsageDao.getAllUsages().map { it.toElectricUsage() }
     }
 
+    /**
+     * Menyimpan data penggunaan listrik dan membuat tagihan otomatis
+     *
+     * @param usage Data penggunaan listrik
+     * @return Long ID penggunaan yang baru dibuat
+     *
+     * Fungsi:
+     * - Menyimpan data penggunaan ke database
+     * - Membuat tagihan otomatis berdasarkan penggunaan
+     * - Menghitung total tagihan dengan biaya admin
+     */
+
     suspend fun insertUsage(usage: ElectricUsage): Long {
         val usageId = electricUsageDao.insertUsage(usage.toEntity())
 

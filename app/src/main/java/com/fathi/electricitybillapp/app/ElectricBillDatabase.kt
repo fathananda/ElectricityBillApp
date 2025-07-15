@@ -12,6 +12,17 @@ import com.fathi.electricitybillapp.data.user.UserDao
 import com.fathi.electricitybillapp.data.user.UserEntity
 import java.util.Date
 
+/**
+ * Database Room untuk aplikasi pembayaran listrik
+ *
+ * Kegunaan:
+ * - Menyediakan akses ke semua DAO (Data Access Object)
+ * - Konfigurasi database dengan TypeConverter
+ * - Mengelola entitas User, ElectricUsage, dan Bill
+ *
+ * @author Fathi
+ * @since 2025
+ */
 
 @Database(
     entities = [UserEntity::class, ElectricUsageEntity::class, BillEntity::class],

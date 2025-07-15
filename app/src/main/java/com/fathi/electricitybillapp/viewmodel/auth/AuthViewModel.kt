@@ -14,6 +14,19 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel untuk manajemen autentikasi
+ *
+ * Kegunaan:
+ * - Mengelola proses login dan logout
+ * - Menyimpan status autentikasi di DataStore
+ * - Validasi kredensial pengguna
+ * - Mengelola state UI untuk autentikasi
+ *
+ * @author Fathi
+ * @since 2025
+ */
+
 @HiltViewModel
 class AuthViewModel @Inject constructor(
     private val userRepository: UserRepository,

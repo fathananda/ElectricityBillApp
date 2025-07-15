@@ -12,6 +12,19 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel untuk manajemen penggunaan listrik
+ *
+ * Kegunaan:
+ * - Memuat data penggunaan listrik
+ * - Menyimpan dan memvalidasi data penggunaan
+ * - Menghitung penggunaan kWh otomatis
+ * - Mengelola state UI untuk penggunaan
+ *
+ * @author Fathi
+ * @since 2025
+ */
+
 @HiltViewModel
 class ElectricUsageViewModel @Inject constructor(
     private val electricUsageRepository: ElectricUsageRepository,

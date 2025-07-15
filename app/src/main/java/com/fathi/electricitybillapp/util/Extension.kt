@@ -8,6 +8,18 @@ import com.fathi.electricitybillapp.data.user.User
 import com.fathi.electricitybillapp.data.user.UserEntity
 import com.fathi.electricitybillapp.data.user.UserRole
 
+/**
+ * Konversi UserEntity ke User domain object
+ *
+ * @return User Domain object pengguna
+ *
+ * Fungsi:
+ * - Mapping dari database entity ke domain object
+ * - Konversi string role ke enum UserRole
+ *
+ * Exceptions:
+ * - IllegalArgumentException: Jika role tidak valid
+ */
 fun UserEntity.toUser(): User {
     return User(
         id = id,
@@ -38,6 +50,19 @@ fun User.toEntity(): UserEntity {
     )
 }
 
+
+/**
+ * Konversi ElectricUsage ke ElectricUsageEntity
+ *
+ * @return ElectricUsageEntity Database entity
+ *
+ * Fungsi:
+ * - Mapping dari domain object ke database entity
+ * - Persiapan data untuk penyimpanan database
+ *
+ * Exceptions:
+ * - Tidak ada exception khusus
+ */
 fun ElectricUsageEntity.toElectricUsage(): ElectricUsage {
     return ElectricUsage(
         id = id,

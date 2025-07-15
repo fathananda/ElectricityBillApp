@@ -10,6 +10,18 @@ import com.fathi.electricitybillapp.data.user.UserEntity
 
 @Dao
 interface UserDao {
+
+    /**
+     * Fungsi autentikasi pengguna
+     *
+     * @param username Nama pengguna
+     * @param password Kata sandi
+     * @return User? Objek pengguna jika berhasil, null jika gagal
+     *
+     * Fungsi:
+     * - Memvalidasi kredensial pengguna
+     * - Mengkonversi UserEntity ke User
+     */
     @Query("SELECT * FROM users WHERE username = :username AND password = :password")
     suspend fun login(username: String, password: String): UserEntity?
 

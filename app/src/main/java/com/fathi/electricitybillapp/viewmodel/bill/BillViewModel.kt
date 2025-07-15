@@ -10,6 +10,20 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel untuk manajemen tagihan
+ *
+ * Kegunaan:
+ * - Memuat data tagihan berdasarkan role pengguna
+ * - Memproses pembayaran tagihan
+ * - Mengelola state UI untuk tagihan
+ * - Error handling untuk operasi tagihan
+ *
+ * @author Fathi
+ * @since 2025
+ */
+
+
 @HiltViewModel
 class BillViewModel @Inject constructor(
     private val billRepository: BillRepository

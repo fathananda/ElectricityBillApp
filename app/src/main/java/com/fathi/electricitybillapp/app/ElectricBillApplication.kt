@@ -13,6 +13,18 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/**
+ * Kelas aplikasi Android dengan konfigurasi Hilt
+ *
+ * Kegunaan:
+ * - Inisialisasi dependensi injection
+ * - Membuat pengguna default saat aplikasi pertama kali dijalankan
+ * - Konfigurasi DataStore untuk penyimpanan preferensi
+ *
+ * @author Fathi
+ * @since 2025
+ */
+
 @HiltAndroidApp
 class ElectricBillApplication : Application(){
     val dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")

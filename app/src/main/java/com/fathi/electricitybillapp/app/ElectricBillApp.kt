@@ -40,6 +40,35 @@ import com.fathi.electricitybillapp.data.user.User
 import com.fathi.electricitybillapp.data.user.UserRole
 import com.fathi.electricitybillapp.viewmodel.auth.AuthViewModel
 
+/**
+ * Modul utama aplikasi pembayaran listrik pascabayar
+ *
+ * Kegunaan:
+ * - Mengelola navigasi utama aplikasi
+ * - Menentukan tampilan berdasarkan status autentikasi
+ * - Menyediakan antarmuka login dan navigasi utama
+ *
+ * @author Fathi
+ * @since 2025
+ */
+
+/**
+ * Composable utama aplikasi
+ *
+ * Fungsi:
+ * - Menentukan tampilan berdasarkan status login
+ * - Mengelola navigasi antara LoginScreen dan MainNavigationScreen
+ *
+ * @return Unit
+ *
+ * Exceptions:
+ * - Tidak ada exception khusus
+ *
+ * Dependencies:
+ * - AuthViewModel untuk status autentikasi
+ * - Compose UI untuk rendering
+ */
+
 @Composable
 fun ElectricBillApp() {
     val authViewModel: AuthViewModel = hiltViewModel()
@@ -54,6 +83,25 @@ fun ElectricBillApp() {
         )
     }
 }
+
+
+/**
+ * Tampilan login aplikasi
+ *
+ * @param authViewModel ViewModel untuk autentikasi
+ *
+ * Fungsi:
+ * - Menampilkan form login
+ * - Validasi input username dan password
+ * - Menampilkan pesan error jika login gagal
+ * - Menyediakan informasi akun demo
+ *
+ * @return Unit
+ *
+ * Exceptions:
+ * - LoginException: Jika kredensial tidak valid
+ * - NetworkException: Jika terjadi masalah koneksi
+ */
 
 @Composable
 fun LoginScreen(authViewModel: AuthViewModel) {
@@ -131,6 +179,24 @@ fun LoginScreen(authViewModel: AuthViewModel) {
         )
     }
 }
+
+
+/**
+ * Tampilan navigasi utama setelah login
+ *
+ * @param user Pengguna yang sedang login
+ * @param onLogout Callback untuk logout
+ *
+ * Fungsi:
+ * - Menampilkan tab navigation berdasarkan role
+ * - Mengelola perpindahan antar screen
+ * - Menyediakan fungsi logout
+ *
+ * @return Unit
+ *
+ * Exceptions:
+ * - Tidak ada exception khusus
+ */
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,0 +1,18 @@
+/**
+ * Modul pengelolaan penggunaan listrik
+ *
+ * Komponen:
+ * - ElectricUsage.kt: Data class penggunaan listrik
+ * - ElectricUsageEntity.kt: Entitas database penggunaan
+ * - ElectricUsageDao.kt: Interface akses data penggunaan
+ * - ElectricUsageRepository.kt: Repository pattern penggunaan
+ *
+ * Kegunaan:
+ * - Mencatat pembacaan meteran listrik
+ * - Menghitung penggunaan kWh
+ * - Menghasilkan tagihan otomatis
+ * - Validasi data penggunaan per bulan
+ *
+ * @author Fathi
+ * @since 2025
+ */

@@ -17,6 +17,19 @@ class BillRepository @Inject constructor(
         return billDao.getAllBills().map { it.toBill() }
     }
 
+    /**
+     * Memperbarui status tagihan (untuk pembayaran)
+     *
+     * @param bill Tagihan yang akan diperbarui
+     *
+     * Fungsi:
+     * - Memperbarui status pembayaran tagihan
+     * - Mencatat waktu pembayaran
+     *
+     * Exceptions:
+     * - SQLException: Jika terjadi error database
+     * - IllegalStateException: Jika tagihan sudah dibayar
+     */
     suspend fun updateBill(bill: Bill) {
         billDao.updateBill(bill.toEntity())
     }
